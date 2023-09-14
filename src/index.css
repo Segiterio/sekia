@@ -1,13 +1,97 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+   --maxWidth: 1440px;
+   --sekiaGray: #FAFAFA;
+   --sekiaOrange: #FA4907;
+   --sekiaBgOrange: #FFF0EB;
+   --grayText: #ABA5A2;
+   --headingText: #393230;
+   --borderLine: #E7E4E4;
+   --barLightOrange: #FEEDE6;
+   --greenText: #14AA07;
+   --blueDark: #157AFF;
+   --lessBlueDark: #1679FD;
+   --bgBluelight: #DBEBFF;
+   --bgBluedark: #EBF3FF;
+   --taskDoneBorder: #F3F1F1;
+   --addbg: #FBFBFB;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::after,
+*::before {
+   font-family: Inter;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   max-width: var(--maxWidth);
+   margin: 0 auto;
+}
+
+.text-sm {
+   font-size: 12px;
+   line-height: normal;
+}
+
+.text-smPlus {
+   font-size: 14px;
+   line-height: 1.5;
+}
+.heading_text {
+   color: var(--headingText)
+}
+
+.fade_text {
+    color:var(--grayText)
+}
+.divider_y {
+    width: 100%;
+    height: 1px ;
+    background-color: var(--borderLine);
+    margin:1rem 0;
+}
+.no_margin {
+    margin: 0;
+}
+
+.divider_x {
+   width: 1px ;
+   height: 100%;
+   min-height: 1.5rem;
+   background-color: var(--borderLine);
+   margin: 0 1px;
+}
+.flex {
+   display: flex;
+   align-items: center;
+   gap:.4rem
+}
+.justify-center {
+    justify-content: center;
+}
+
+.dotted-border {
+    border:2px dotted var(--borderLine);
+    border-radius: 8px;
+    padding: .4rem ;
+    background-color: var(--addbg);
+}
+
+.justify-between {
+   justify-content: space-between;
+}
+
+.border-bottom {
+    border-bottom: 3px solid transparent;
+}
+
+.border-orange {
+    border-color: var(--sekiaOrange);
+}
+.max-char {
+   max-width: 35ch;
 }

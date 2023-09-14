@@ -1,0 +1,50 @@
+.container {
+    width: 90px;
+    border-right: 1px solid var(--borderLine);
+    min-height: 100dvh;
+    display: none;
+    gap: 2rem;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+}
+
+.container> :first-child {
+    align-self: center;
+}
+
+.menu-icons-container {
+    display: flex;
+    flex-direction: column;
+    gap: min(3.75rem, 6vh);
+}
+
+.icon_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.icon_container img:hover {
+    cursor: pointer
+}
+
+.side_border {
+    position: absolute;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    border-radius: 100px 0 0 100px;
+}
+
+.active {
+    background-color: var(--sekiaOrange);
+}
+
+@media screen and (min-width:769px) {
+    .container{
+        display: flex;
+        width: 90px;
+    }
+}

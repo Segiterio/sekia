@@ -1,0 +1,18 @@
+.rounded_box {
+    padding: .5rem .8rem;
+    width: fit-content;
+    border-radius: 50px;
+}
+.rounded_box:hover {
+     cursor: pointer;
+}
+
+.OrangeTheme  {
+    background-color: var(--sekiaBgOrange);
+    color:var(--sekiaOrange);
+}
+
+.BlueTheme {
+     background-color: var(--bgBluedark);
+     color:var(--blueDark)
+}
