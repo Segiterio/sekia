@@ -1,13 +1,16 @@
 .container {
-    width: 90px;
     border-right: 1px solid var(--borderLine);
-    min-height: 100dvh;
     display: none;
-    gap: 2rem;
     background-color: #fff;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2.5rem 0;
+    padding: .5rem 0;
+}
+.logo_container {
+     flex-direction: column;
+     display: flex;
+     align-items: center;
+     gap:.5rem
 }
 
 .container> :first-child {
@@ -45,6 +48,5 @@
 @media screen and (min-width:769px) {
     .container{
         display: flex;
-        width: 90px;
     }
 }

@@ -21,10 +21,11 @@
 *,
 *::after,
 *::before {
-   font-family: Inter;
+  
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: Inter;
 }
 
 body {
@@ -40,6 +41,12 @@ body {
 .text-smPlus {
    font-size: 14px;
    line-height: 1.5;
+}
+
+.text-lg{
+   font-size: 18px;
+   line-height: 1.2;
+   font-weight: 500;
 }
 .heading_text {
    color: var(--headingText)

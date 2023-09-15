@@ -9,11 +9,11 @@ import ScheduleCard from "../Cards/ScheduleCard/index"
 const ScheduleBar = () => {
     const [value, onChange] = useState(new Date());
   return (
-    <div className="scheduleBar_container">
+    <div className="scheduleBar_container" >
       {/* Profile select */}
        <ProfileSelect/>
       {/* calendar ke liye */}
-      <div style={{marginTop:".5rem"}}>
+      <div style={{marginTop:""}}>
          <Calendar onChange={onChange} value={value}  />
       </div>
       {/* schedule task */}

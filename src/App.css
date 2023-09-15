@@ -1,6 +1,9 @@
 
+
 @media screen and (min-width:769px) {
     .app_layout_container {
-         display: flex;
+        display: grid;
+        grid-template-columns: minmax(auto, 90px) auto auto;
+        min-height: 100dvh;
     }
 }

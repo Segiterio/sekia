@@ -13,7 +13,7 @@ import CategoryIcon from "../assets/icons/Iconly/Light/Category.svg"
 
 export const IconsData = [
     {
-        id: 1,
+        id: 0,
         title: "Home",
         icon: HomeIcon,
         path: "/"
@@ -25,32 +25,32 @@ export const IconsData = [
         path: "/activity"
     },
     {
-        id:1,
+        id:2,
         title:"Folder",
         icon:FolderIcon,
         path:"/folder"
       },
       {
-        id:1,
+        id:3,
         title:"Calendar",
         icon:CalendarIcon,
         path:"/calendar"
       },
       {
-        id:1,
+        id:4,
         title:"Messages",
         icon:MessagesIcon,
         path:"/messages"
       },
       {
-        id:1,
+        id:5,
         title:"Users",
         icon:UserIcon,
         path:"/users"
       },
 
       {
-        id:1,
+        id:6,
         title:"Settings",
         icon:SettingIcon,
         path:"/settings"

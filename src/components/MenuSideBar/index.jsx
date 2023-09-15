@@ -10,7 +10,7 @@ const MenuSideBar = () => {
   return (
     <div className='container'>
     {/* logo */}
-      <div className=''>
+      <div className='logo_container'>
         <img src={LogoIcon}  alt="brand logo" className=''/>
         <p className='text-sm'>Sekia</p>
       </div>

@@ -6,7 +6,7 @@ import { StyleBtn } from "./styleBtn";
 import MessagesIcon from "../../assets/icons/vuesax/linear/messages.svg";
 import CalendarIcon from "../../assets/icons/Iconly/Light/Calendar.svg";
 import LinkIcon from "../../assets/icons/vuesax/bold/link-2.svg";
-import AddIcon from "../../assets/icons/add-circle.svg";
+import AddIconGray from "../../assets/icons/add-circle-gray.svg";
 import { TaskCard } from "../Cards/TaskCard";
 import {
   Chart as ChartJS,
@@ -16,6 +16,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  SubTitle,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
@@ -26,20 +27,28 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  SubTitle
 );
 
 export const options = {
   responsive: true,
-  maintainAspectRation:false,
-  aspectRatio:1/.5,
+  maintainAspectRation: false,
+  aspectRatio: 1 / 0.5,
   plugins: {
     legend: {
       display: false,
       position: "top",
     },
+    tooltip:{
+       backgroundColor:"white",
+       titleColor:"black",
+       bodyColor:"#ABA5A2",
+       borderColor:"#ABA5A2",
+       borderWidth:"1"
+    },
     title: {
-      display: true,
+      display: false,
       text: "Task Activities",
       position: "top",
       align: "start",
@@ -62,7 +71,7 @@ export const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
+      label: "Almost complete",
       data: labels.map(() => faker.number.int({ min: 0, max: 200 })),
       backgroundColor: "#FEEDE6",
       hoverBackgroundColor: "#FA4907",
@@ -177,19 +186,20 @@ const Layout = () => {
         ))}
         {/* add circle card */}
         <div className="flex justify-center dotted-border">
-          <img src={AddIcon} alt="add-icon" />
+          <img src={AddIconGray} alt="add-icon" />
         </div>
       </div>
-      <div
-        className="chart_container"
-        
-      >
+      <div className="chart_container">
+        <div className="flex justify-between">
+           <div className="heading_text">Task Activities</div>
+          <button className="view_btn text-sm fade_text">last 7 days</button>
+        </div>
         <Chart />
       </div>
       <div className="task_container">
         {/* Task section */}
-        <div className="flex justify-between">
-          <p className="heading_text">My Task Today</p>
+        <div className="flex justify-between" style={{marginBottom:".5rem"}}>
+          <p className="heading_text text-lg">My Task Today</p>
           <button className="view_btn text-sm fade_text">View All</button>
         </div>
         <div className="task_cards_container">

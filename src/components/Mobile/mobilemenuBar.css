@@ -1,0 +1,49 @@
+.mobile_container {
+    position: fixed;
+    inset: 0;
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding:0 2rem;
+    z-index: 10;
+    display: flex;
+}
+.cross:hover {
+     cursor:pointer
+}
+
+.mobile_logo_container {
+     display: flex;
+     align-items: center;
+     gap:.5rem;
+}
+
+.mobile_container> :first-child {
+    align-self: center;
+}
+
+.mobile_menu-icons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+.mobile_icon_container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.mobile_icon_container img:hover {
+    cursor: pointer
+}
+
+.mobile_active {
+    background-color: var(--sekiaOrange);
+}
+
+@media screen and (min-width:769px) {
+   .mobile_container{
+    display: none;
+   }
+}
